@@ -10,12 +10,13 @@ const Filter = ({setActive, active, setFiltered, popular}) => {
       const filteredMovies = popular.filter((m) => m.genre_ids.includes(active))
       setFiltered(filteredMovies)
     },[active])
+    console.log(active)
     
   return (
       <div className="filter-container">
-          <button onClick={()=> setActive(0)}>All</button>
-          <button onClick={()=> setActive(35)}>Comedy</button>
-          <button onClick={()=> setActive(28)}>Action</button>
+          <button className={active === 0 ? "activeButton" : ""} onClick={()=> setActive(0)}>All</button>
+          <button className={active === 35 ? "activeButton" : ""} onClick={()=> setActive(35)}>Comedy</button>
+          <button className={active === 28 ? "activeButton" : ""} onClick={()=> setActive(28)}>Action</button>
       </div>
   )
 }

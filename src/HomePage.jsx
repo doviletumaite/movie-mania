@@ -1,3 +1,4 @@
+import { motion } from "framer-motion"
 import { useEffect, useState } from "react"
 import Filter from "./components/Fileter.jsx"
 import SingleMovie from "./components/SingleMovie.jsx"
@@ -20,13 +21,13 @@ const HomePage = () => {
     return (
         <>
         <Filter popular={popularMovies} setFiltered={setFiltered} active={active} setActive={setActive}/>
-        <div className="movie-board">
+        <motion.div animate={{ y:100 }} layout className="movie-board">
             
             {
                 filtered.map(m => 
                     { return <SingleMovie key={m.id} movie={m}/>})
             }
-        </div>
+        </motion.div>
         </>
     )
 }
