@@ -1,5 +1,6 @@
 .filter-container button{
     margin-right: 2rem;
+    margin-bottom: 1rem;
     min-width: 5rem;
     padding: 0.5rem 1rem;
     border: none;
@@ -13,7 +14,8 @@
     background-color: rgba(221, 215, 215, 0.507);
     color: rgba(0, 0, 0, 0.822);
 }
-.activeButton{
-    background-color: rgba(221, 215, 215, 0.507);
+.filter-container .activeButton{
+    background-color: rgba(122, 120, 120, 0.507);
     color: rgba(0, 0, 0, 0.822);
+    border: 1px solid rgba(0, 0, 0, 0.507);
 }
