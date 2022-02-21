@@ -1,4 +1,4 @@
-import { motion } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
 import { useEffect, useState } from "react"
 import Filter from "./components/Fileter.jsx"
 import SingleMovie from "./components/SingleMovie.jsx"
@@ -21,12 +21,13 @@ const HomePage = () => {
     return (
         <>
         <Filter popular={popularMovies} setFiltered={setFiltered} active={active} setActive={setActive}/>
-        <motion.div animate={{ y:100 }} layout className="movie-board">
-            
+        <motion.div layout className="movie-board">
+            <AnimatePresence>
             {
                 filtered.map(m => 
                     { return <SingleMovie key={m.id} movie={m}/>})
             }
+            </AnimatePresence>
         </motion.div>
         </>
     )
