@@ -13,8 +13,8 @@ const HomePage = () => {
         const movies = await moviesToFetch.json()
         const moviesToFetch2  = await fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=4e6137a25c112d7a3931970b2d03b3b4&language=en-US&page=2")
         const movies2 = await moviesToFetch2.json()
-        setPopularMovies(movies2.results)
-        setFiltered(movies2.results)
+        setPopularMovies(movies.results.concat(movies2.results))
+        setFiltered(movies2.results.concat(movies2.results))
     }
    useEffect(()=> {
     fetchMovies()

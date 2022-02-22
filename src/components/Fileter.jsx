@@ -19,7 +19,7 @@ const Filter = ({setActive, active, setFiltered, popular}) => {
           <button className={active === 28 ? "activeButton" : ""} onClick={()=> setActive(28)}>Action</button>
           <button className={active === 12 ? "activeButton" : ""} onClick={()=> setActive(12)}>Adventure</button>
           <button className={active === 16 ? "activeButton" : ""} onClick={()=> setActive(28)}>Animation</button>
-          <button className={active === 80 ? "activeButton" : ""} onClick={()=> setActive(28)}>Crime</button>
+          <button className={active === 80 ? "activeButton" : ""} onClick={()=> setActive(80)}>Crime</button>
           <button className={active === 99 ? "activeButton" : ""} onClick={()=> setActive(28)}>Documentary</button>
           <button className={active === 18 ? "activeButton" : ""} onClick={()=> setActive(28)}>Drama</button>
           <button className={active === 10751 ? "activeButton" : ""} onClick={()=> setActive(10751)}>Family</button>
