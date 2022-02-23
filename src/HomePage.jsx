@@ -25,6 +25,7 @@ const HomePage = () => {
             <div className="itemsContainer">
            <img className="lamp" src={lamp}/> 
         <Search filtered={filtered} setFiltered={setFiltered}/>
+        <img className="lamp2" src={lamp}/> 
         <Filter popular={popularMovies} setFiltered={setFiltered} active={active} setActive={setActive}/>
         </div>
         <motion.div layout className="movie-board">
