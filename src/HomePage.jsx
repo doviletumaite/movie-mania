@@ -9,14 +9,14 @@ const HomePage = () => {
     const [popularMovies, setPopularMovies] = useState([])
     const [filtered, setFiltered] = useState([])
     const [active, setActive] = useState(0)
-    const fetchMovies = async () => {
-        const moviesToFetch  = await fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=4e6137a25c112d7a3931970b2d03b3b4&language=en-US&page=1")
+    const fetchMovies = async (numb) => {
+        const moviesToFetch  = await fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=4e6137a25c112d7a3931970b2d03b3b4&language=en-US&page=" + numb)
         const movies = await moviesToFetch.json()
         setPopularMovies(movies.results)
         setFiltered(movies.results)
     }
    useEffect(()=> {
-    fetchMovies()
+    fetchMovies(3)
    }, [])
   console.log("movies", popularMovies)
     return (

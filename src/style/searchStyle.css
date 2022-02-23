@@ -2,17 +2,22 @@
     margin-bottom: 2rem;
     width: 70%;
     min-height: 2rem;
-    border-color: rgba(0, 0, 0, 0.418);
-    border-radius: 1rem;
+    border: none;
+    border-radius: 2px;
     padding: 0.5rem;
     font-size: 1rem;
+    background-color: rgba(174, 124, 240, 0.575);
+    outline: none;
+    box-shadow: rgba(178, 95, 246, 0.3) 0px 19px 38px, rgba(134, 94, 243, 0.22) 0px 15px 12px;
 }
 .searchbar::placeholder{
-  color: rgba(0, 0, 0, 0.801);
-  font-weight:500;
+  color: rgba(255, 255, 255, 0.801);
+  font-weight:600;
   font-size: 1rem;
 }
 .searchbar:focus{
 outline:none;
-border-color: rgba(0, 0, 0, 0.787);
+border-color: rgba(182, 168, 246, 0.787);
+color: white;
+font-weight:600;
 }

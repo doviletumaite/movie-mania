@@ -4,18 +4,19 @@
     min-width: 5rem;
     padding: 0.5rem 1rem;
     border: none;
-    background-color: rgb(221, 215, 215);
-    color: black;
-    border-radius: 1rem;
+    background-color: rgb(55, 113, 238);
+    color: rgb(255, 255, 255);
+    border-radius: 2px;
     font-weight: bold;
     cursor: pointer;
+    box-shadow: rgba(178, 95, 246, 0.3) 0px 19px 38px, rgba(134, 94, 243, 0.22) 0px 15px 12px;
 }
 .filter-container button:hover{
-    background-color: rgba(221, 215, 215, 0.507);
-    color: rgba(0, 0, 0, 0.822);
+    background-color:rgb(35, 97, 231);
+    box-shadow: rgba(178, 95, 246, 0.452) 0px 25px 42px, rgba(134, 94, 243, 0.363) 0px 20px 18px;
 }
 .filter-container .activeButton{
-    background-color: rgba(122, 120, 120, 0.507);
-    color: rgba(0, 0, 0, 0.822);
-    border: 1px solid rgba(0, 0, 0, 0.507);
+    background-color: rgb(27, 92, 233);
+    border: 1px solid rgba(255, 255, 255, 0.507);
+    box-shadow: rgba(178, 95, 246, 0.452) 0px 25px 42px, rgba(134, 94, 243, 0.363) 0px 20px 18px;
 }
