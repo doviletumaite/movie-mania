@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion"
 import { useEffect, useState } from "react"
 import Filter from "./components/Fileter.jsx"
+import Search from "./components/Search.jsx"
 import SingleMovie from "./components/SingleMovie.jsx"
 import "./style/generalStyle.css"
 
@@ -22,6 +23,7 @@ const HomePage = () => {
   console.log("movies", popularMovies)
     return (
         <>
+        <Search/>
         <Filter popular={popularMovies} setFiltered={setFiltered} active={active} setActive={setActive}/>
         <motion.div layout className="movie-board">
             <AnimatePresence>
