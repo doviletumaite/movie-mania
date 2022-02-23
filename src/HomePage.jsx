@@ -10,6 +10,7 @@ const HomePage = () => {
     const [popularMovies, setPopularMovies] = useState([])
     const [filtered, setFiltered] = useState([])
     const [active, setActive] = useState(0)
+    const [numb, setNumb] = useState(1)
     const fetchMovies = async (numb) => {
         const moviesToFetch  = await fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=4e6137a25c112d7a3931970b2d03b3b4&language=en-US&page=" + numb)
         const movies = await moviesToFetch.json()
@@ -17,10 +18,15 @@ const HomePage = () => {
         setFiltered(movies.results)
     }
    useEffect(()=> {
-    fetchMovies(3)
+    fetchMovies(numb)
    }, [])
-  console.log("movies", popularMovies)
+   const loadMoreContent = () => {
+    setNumb(numb+1)
+    console.log(numb)
+   }
+ 
     return (
+        <>
         <div className="bodyPage">
             <div className="itemsContainer">
            <img className="lamp" src={lamp}/> 
@@ -37,7 +43,10 @@ const HomePage = () => {
             }
             </AnimatePresence>
         </motion.div>
+             <button onClick={()=>loadMoreContent()} className="showMore">show more</button>
         </div>
+       
+         </>
     )
 }
 export default HomePage
