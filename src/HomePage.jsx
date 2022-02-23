@@ -4,6 +4,7 @@ import Filter from "./components/Fileter.jsx"
 import Search from "./components/Search.jsx"
 import SingleMovie from "./components/SingleMovie.jsx"
 import "./style/generalStyle.css"
+import lamp from "./style/pics/lamp.gif"
 
 const HomePage = () => {
     const [popularMovies, setPopularMovies] = useState([])
@@ -20,10 +21,12 @@ const HomePage = () => {
    }, [])
   console.log("movies", popularMovies)
     return (
-        <>
+        <div className="bodyPage">
+            
         <Search filtered={filtered} setFiltered={setFiltered}/>
         <Filter popular={popularMovies} setFiltered={setFiltered} active={active} setActive={setActive}/>
         <motion.div layout className="movie-board">
+            <img className="lamp" src={lamp}/>
             <AnimatePresence>
             {
                 filtered.map(m => 
@@ -31,7 +34,7 @@ const HomePage = () => {
             }
             </AnimatePresence>
         </motion.div>
-        </>
+        </div>
     )
 }
 export default HomePage

@@ -1,6 +1,7 @@
 .searchbar{
     margin-bottom: 2rem;
-    width: 70%;
+    margin-top: 3rem;
+    width: 100%;
     min-height: 2rem;
     border: none;
     border-radius: 2px;
