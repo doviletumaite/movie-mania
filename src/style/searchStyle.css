@@ -12,12 +12,7 @@
   font-weight:500;
   font-size: 1rem;
 }
-.searchbar:active{
-    margin-bottom: 2rem;
-    width: 70%;
-    min-height: 2rem;
-    border-color: rgba(0, 0, 0, 0.418);
-    border-radius: 1rem;
-    padding: 0.5rem;
-    font-size: 1rem;
+.searchbar:focus{
+outline:none;
+border-color: rgba(0, 0, 0, 0.787);
 }
