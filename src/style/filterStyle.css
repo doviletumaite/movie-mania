@@ -20,3 +20,7 @@
     border: 1px solid rgba(255, 255, 255, 0.507);
     box-shadow: rgba(178, 95, 246, 0.452) 0px 25px 42px, rgba(134, 94, 243, 0.363) 0px 20px 18px;
 }
+.filter-container{
+ width: 100%;
+ grid-column: 1/5;
+}

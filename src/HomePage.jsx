@@ -22,11 +22,13 @@ const HomePage = () => {
   console.log("movies", popularMovies)
     return (
         <div className="bodyPage">
-            
+            <div className="itemsContainer">
+           <img className="lamp" src={lamp}/> 
         <Search filtered={filtered} setFiltered={setFiltered}/>
         <Filter popular={popularMovies} setFiltered={setFiltered} active={active} setActive={setActive}/>
+        </div>
         <motion.div layout className="movie-board">
-            <img className="lamp" src={lamp}/>
+            
             <AnimatePresence>
             {
                 filtered.map(m => 

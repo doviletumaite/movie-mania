@@ -8,12 +8,16 @@
   grid-column-gap: 1rem ;
   grid-row-gap: 2rem;
 }
+.itemsContainer{
+  display: grid;
+  grid-template-columns: 30vh [col-start] 70vh [col-start];
+  grid-template-rows:  30% [row1-start]80% [row2-end];
+  grid-column-gap: 1rem ;
+  grid-row-gap: 5rem
+}
+
 .lamp{
-grid-row: 1/20;
-object-fit:contain;
-width: 80%;
-justify-self: center;
-align-self:flex-start;
+width: 30%;
 margin-top: 2rem;
 }
 .movie-img{
