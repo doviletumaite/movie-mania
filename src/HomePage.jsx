@@ -30,7 +30,7 @@ const HomePage = () => {
         <div className="bodyPage">
             <div className="itemsContainer">
            <img className="lamp" src={lamp}/> 
-        <Search filtered={filtered} setFiltered={setFiltered}/>
+        <Search filtered={filtered} setFiltered={setFiltered} numb={numb}/>
         <img className="lamp2" src={lamp}/> 
         <Filter popular={popularMovies} setFiltered={setFiltered} active={active} setActive={setActive}/>
         </div>
