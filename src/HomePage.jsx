@@ -44,9 +44,6 @@ const HomePage = () => {
             </AnimatePresence>
         </motion.div>
              <button onClick={()=>loadMoreContent()} className="showMore">show more</button>
-             <button onClick={()=>loadMoreContent()} className="showMore">show more</button>
-             <button onClick={()=>loadMoreContent()} className="showMore">show more</button>
-             <button onClick={()=>loadMoreContent()} className="showMore">show more</button>
         </div>
        
          </>
