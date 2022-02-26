@@ -12,7 +12,8 @@ const Search = ({filtered, setFiltered, numb}) => {
 
     useEffect(() => {
         if(query === "") return
-        searchMovie(query)
+        searchMovie(query, numb)
+        console.log("numb in search comp", numb)
     }, [query, numb])
     return (
         <div>

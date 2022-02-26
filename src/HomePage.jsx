@@ -21,8 +21,9 @@ const HomePage = () => {
     fetchMovies(numb)
    }, [])
    const loadMoreContent = () => {
-    setNumb(numb+1)
-    console.log(numb)
+    setNumb(prevNumb => prevNumb + 1)
+    fetchMovies(numb)
+    console.log("numb in home", numb)
    }
  
     return (
@@ -43,7 +44,7 @@ const HomePage = () => {
             }
             </AnimatePresence>
         </motion.div>
-             <button onClick={()=>loadMoreContent()} className="showMore">show more</button>
+             <button onClick={loadMoreContent} className="showMore">show more</button>
         </div>
        
          </>
