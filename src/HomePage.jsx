@@ -43,8 +43,11 @@ const HomePage = () => {
                     { return <SingleMovie key={m.id} movie={m}/>})
             }
             </AnimatePresence>
-        </motion.div>
+        </motion.div> 
+       
+        <button onClick={loadMoreContent} className="">previous page</button>
              <button onClick={loadMoreContent} className="showMore">show more</button>
+           
         </div>
        
          </>
