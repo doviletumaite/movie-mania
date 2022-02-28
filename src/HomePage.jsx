@@ -21,9 +21,15 @@ const HomePage = () => {
     fetchMovies(numb)
    }, [])
    const loadMoreContent = () => {
+       if(numb===0) return
     setNumb(prevNumb => prevNumb + 1)
     fetchMovies(numb)
     console.log("numb in home", numb)
+   }
+   const goback = () => {
+       if (numb===0) return
+       setNumb(prevNumb => prevNumb -1)
+       fetchMovies(numb)
    }
  
     return (
@@ -43,11 +49,13 @@ const HomePage = () => {
                     { return <SingleMovie key={m.id} movie={m}/>})
             }
             </AnimatePresence>
+            
         </motion.div> 
-       
-        <button onClick={loadMoreContent} className="">previous page</button>
+            <div className="buttonGroup">
+             <button onClick={goback} className="goback">previous page</button>
              <button onClick={loadMoreContent} className="showMore">show more</button>
-           
+            </div>
+         
         </div>
        
          </>

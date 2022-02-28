@@ -44,8 +44,14 @@ transform: scaleX(-1)
     width: 100%;
     color: white;
 }
+.buttonGroup{
+  margin: 0 50%;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+}
 .showMore{
-  margin:  0 50%;
+  /* margin:  0 50%; */
   min-width: 5rem;
   padding: 0.5rem 1rem;
   border: none;
@@ -57,6 +63,23 @@ transform: scaleX(-1)
   box-shadow: rgba(178, 95, 246, 0.3) 0px 19px 38px, rgba(134, 94, 243, 0.22) 0px 15px 12px;
 }
 .showMore:hover{
+  background-color:rgb(35, 97, 231);
+  box-shadow: rgba(178, 95, 246, 0.452) 0px 25px 42px, rgba(134, 94, 243, 0.363) 0px 20px 18px;
+}
+.goback{
+    /* margin:  0 50%; */
+    min-width: 5rem;
+    margin-right: 2rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: rgb(49, 103, 219);
+    color: rgb(255, 255, 255);
+    border-radius: 2px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: rgba(178, 95, 246, 0.3) 0px 19px 38px, rgba(134, 94, 243, 0.22) 0px 15px 12px;
+}
+.goback:hover{
   background-color:rgb(35, 97, 231);
   box-shadow: rgba(178, 95, 246, 0.452) 0px 25px 42px, rgba(134, 94, 243, 0.363) 0px 20px 18px;
 }
